@@ -10,6 +10,7 @@
 * install [Docker](https://www.docker.com/) Container
 * Docker image Debian or CentOS
 * Install [Robomongo](https://robomongo.org/download)
+* install [ngrok](https://ngrok.com/)
 * Install on docker container:
 
  * Nodejs (latest)
@@ -39,28 +40,28 @@ Create a Docker hub save and push the image .
 <td>Installing Express and building first routes | Middlewares. </td>
 <td> ES2015: Objects, Strings | Arrays, Maps, and Sets </td>
 <td>ES2015: Classes and Modules | Promises, Iterators, and Generators </td>
-<td></td>
+<td> build a unit test for our bot</td>
 </tr>
 <tr>
 <td>Error Handling in nodejs</td>
 <td>User Params | Body Parser | refactoring routes </td>
 <td> Building your facebook bot with nodejs  </td>
 <td>Mqtt Deploying another express instance that interact with the FbBot</td>
-<td></td>
+<td> creating a (phantom js) like crawler and using async </td>
 </tr>
 <tr>
 <td>ES2015 Declaration+Functions </td>
 <td> Build your Express.js App With TDD</td>
 <td>Facebook Bot (continue) + Fetching 3rd parties apis  </td>
-<td></td>
-<td></td>
+<td>Code mask on </td>
+<td>General Discussion(browserfy-electron-jhonny5)</td>
 </tr>
 <tr>
 <td>Building A cam stream server Using a raspberry pi and web sockets </td>
 <td>Express Angular mongodb : build your own seed</td>
 <td>Redis integration - Socket.io brief </td>
-<td></td>
-<td></td>
+<td>Building testing unit using mocha-jasmin-nodeunit </td>
+<td>Q & A</td>
 </tr>
 </tbody>
 </table>
