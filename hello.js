@@ -16,7 +16,7 @@ http.createServer(function(request,response) {
     request.pipe(newFile);
    
     request.on('end',function(){
-        response.end('uploaded4');
+        response.end('uploaded56');
     });    
     }).listen(8080,function() {
     console.log('listining on port 8080')});
