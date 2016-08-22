@@ -65,3 +65,21 @@ Create a Docker hub save and push the image .
 </tr>
 </tbody>
 </table>
+
+
+### Using Dockers
+* In the Dockerfile make sure to install nodemon 
+`npm install -g nodemon`
+
+* In the package.json or Dockerfile the script to start should have nodemon -L app.js
+
+* When running the docker link the source folder to the docker folder by running the below script
+`docker run -it --name node-web-app -p 8080:8080 -v $(pwd):/usr/src/app -d node-web-app`
+
+* To redeploy a docker image you need to remove the docker container and the image and run the build again
+```
+docker stop <<container-id>>
+docker rm <<container-id>>
+docker rmi <<image-id>>
+docker build -t node-web-app .
+```
