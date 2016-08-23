@@ -83,3 +83,6 @@ docker rm <<container-id>>
 docker rmi <<image-id>>
 docker build -t node-web-app .
 ```
+
+* To go into a docker bash run the below code 
+`docker exec -it <container-id> bash`
