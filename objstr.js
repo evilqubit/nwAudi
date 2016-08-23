@@ -28,3 +28,13 @@ function buildUser4(first,last,postCount){
 }
 
 console.log(buildUser4("carlo","Khanati",3));
+
+
+function countDownTimer(targer,timeLeft,options={}){
+    let defaults = {
+        container : '.timer-display',
+        timeUnit : 'seconds'
+    }
+    let settings = object.assign({},defaults,options);
+    return settings;
+}
