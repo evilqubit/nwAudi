@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<script>
+  $(function(){
+
+$('form').on("submit",function(event){
+  event.preventDefault();
+  var form = $(this);
+  var blockData = form.serialize();
+  alert(blockData);
+});
+    
+  })
+</script>
+<body>
+  May Node and Express be with you.
+  <form id="form">
+  <input type="text" placeholder="name" name="Name">
+  <input type="text" placeholder="description" name="Description">
+  <input type="Submit"/>
+</form>
+</body>
+</html>

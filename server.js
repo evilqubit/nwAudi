@@ -7,6 +7,7 @@ const PORT = 8080;
 
 const bodyParser= require('body-parser')
 const app = express()
+app.use(express.static("public"));
 app.set('view engine', 'ejs')
 
 const MongoClient = require('mongodb').MongoClient
@@ -56,7 +57,7 @@ var blocks ={
 
 app.param('name',function(req,res,next) {
   var name = req.params.name;
-  var block = name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase();
+  var block = name[0].toUpperCase() + name.slice(1).toLowerCase();
   req.blockName = block;
   next();
 });
