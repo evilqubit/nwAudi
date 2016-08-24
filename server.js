@@ -37,3 +37,38 @@ app.post('/quotes', (req, res) => {
     res.redirect('/')
   })
 })
+
+app.get('/blocks',function(req,res){
+  var blocks =["fixed","movable","rotating"];
+  if (req.query.limit >=0) {
+    res.json(blocks.slice(0,req.query.limit));
+  }
+  else {
+    res.json(blocks);
+  }
+});
+
+var blocks ={
+  "Fixed":"fixed man",
+  "Movable": "move ur ass",
+  "Rotating":"rotate places"
+}
+
+app.param('name',function(req,res,next) {
+  var name = req.params.name;
+  var block = name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase();
+  req.blockName = block;
+  next();
+});
+
+app.get('/blocks/:name',function(req,res){
+  console.log(req.blockName);
+  var obj = blocks[req.blockName];
+  if (!obj) {
+    res.status(404).json("no data found for " + req.params.name);
+  }
+  else {
+    res.json(obj);
+  }
+});
+
